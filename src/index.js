@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+
+export const MyContext = React.createContext();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+        <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
