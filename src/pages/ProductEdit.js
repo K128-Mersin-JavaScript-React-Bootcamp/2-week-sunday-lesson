@@ -8,7 +8,9 @@ export default function ProductEdit(props) {
   let history = useHistory();
   const { fruits } = useContext(MyContext);
   const id = props.match.params.id;
-  const filteredFruits = fruits.filter((v) => v.id === id);
+  console.log("id", id);
+  const filteredFruits = fruits.filter((v) => v.id == id);
+  console.log("FRUITS", fruits);
 
   if (!filteredFruits.length) {
     return <Redirect
